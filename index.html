@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material ui icons - google web fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    <title>My_test</title>
+    <body class="container" id="root">
+        <form style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="col-md-5">
+                        <label>Initial money:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control form-control-lg sm-6 initial_money" value="30" name="initial_money" id="initial_money" disabled>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="col-md-5">
+                        <label>Current money:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control form-control-lg sm-6 current_money" value="30" name="current_money" id="current_money" disabled>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div style="margin-top: 20px;">
+                        <button type="button" class="btn btn-primary add_chanel" data-bs-toggle="modal" data-bs-target="#myModal"  style="height: 30px;">
+                            Add channel
+                        </button>
+                        <button type="button" class="btn btn-danger" style="height: 30px;" onclick="reset_click()">Reset</button>
+                    </div>
+                </div>              
+            </div>
+        </form>
+        <div id="show_chanel" style="margin-top: 50px;"></div>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Welcome to our subway</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3 mt-3">
+                            <label for="start_point" class="form-label">Starting point:</label>
+                            <select name="starting_point" class="form-select form-select-lg mb-3" id="starting_point">
+                                <option value="Holborn">Holborn</option>
+                                <option value="Earl">Earl’s Court</option>
+                                <option value="Wimbledon">Wimbledon</option>                                    <option value="Hammersmith">Hammersmith</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dest" class="form-label">Destination:</label>
+                            <select name="destination" class="form-select form-select-lg mb-3" id="destination">
+                                <option value="Holborn">Holborn</option>
+                                <option value="Earl">Earl’s Court</option>
+                                <option value="Wimbledon">Wimbledon</option>
+                                <option value="Hammersmith">Hammersmith</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="transport" class="form-label">Transpotation:</label>
+                            <select name="transpotation" class="form-select form-select-lg mb-3" id="transpotation">
+                                <option value="Bus">Bus</option>
+                                <option value="Tube">Tube</option>
+                            </select>
+                        </div>
+                        <div class="form-check mb-3">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember" id="swipe"> swipe out
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="add_click()">Ok</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>          
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
